@@ -12,7 +12,7 @@ $form = new RegistrationForm($_POST);
 if ($_POST) {
     if($form->validate()){
 
-        жопа
+        Попажопа
 
     }
 
