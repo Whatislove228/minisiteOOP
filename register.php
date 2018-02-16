@@ -4,15 +4,21 @@ require_once ('Forms/registration.form.class.php');
 require_once ('db.php');
 require_once ('password.class.php');
 
-$msg = '';
+$db_host = "127.0.0.1";
+$db_user = "root";
+$db_password = "56584978";
+$db_name = "RegistrationOOP";
 
+
+$msg = '';
+$db = new DB($db_host, $db_user, $db_password, $db_name);
 $form = new RegistrationForm($_POST);
 
 
 if ($_POST) {
     if($form->validate()){
+        $email = $db->escape($form->getEmail());
 
-        Попажопа
 
     }
 
